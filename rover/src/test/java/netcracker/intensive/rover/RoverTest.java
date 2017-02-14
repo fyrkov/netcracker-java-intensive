@@ -20,7 +20,6 @@ public class RoverTest extends AbstractRoverTest {
     @Test
     public void testMoveDownwardsToFreeCell() {
         testedInstance.move();
-
         assertEquals(new Point(0, 1), testedInstance.getCurrentPosition());
     }
 
@@ -30,7 +29,6 @@ public class RoverTest extends AbstractRoverTest {
         testedInstance.move();
         testedInstance.turnTo(Direction.WEST);
         testedInstance.move();
-
         assertEquals(new Point(0,0), testedInstance.getCurrentPosition());
     }
 
@@ -39,7 +37,6 @@ public class RoverTest extends AbstractRoverTest {
         testedInstance.move();
         testedInstance.turnTo(Direction.NORTH);
         testedInstance.move();
-
         assertEquals(new Point(0,0), testedInstance.getCurrentPosition());
     }
 
@@ -49,7 +46,6 @@ public class RoverTest extends AbstractRoverTest {
         testedInstance.move();
         testedInstance.turnTo(Direction.SOUTH);
         testedInstance.move();
-
         assertEquals(new Point(1,0), testedInstance.getCurrentPosition());
     }
 
@@ -105,18 +101,14 @@ public class RoverTest extends AbstractRoverTest {
     @Test
     public void testLandWontLandOutside(){
         testedInstance.lift();
-
         testedInstance.land(new Point(5, 6), Direction.EAST);
-
         assertTrue(testedInstance.isAirborne());
     }
 
     @Test
     public void testLandWontLandOnObstacle() {
         testedInstance.lift();
-
         testedInstance.land(new Point(1, 1), Direction.EAST);
-
         assertTrue(testedInstance.isAirborne());
     }
 
@@ -126,5 +118,13 @@ public class RoverTest extends AbstractRoverTest {
             testedInstance.turnTo(direction);
             assertEquals(direction, testedInstance.getDirection());
         }
+    }
+
+    @Test
+    public void testAirborneTurnTo() {
+        testedInstance.lift();
+        testedInstance.turnTo(Direction.EAST);
+        assertNull(testedInstance.getDirection());
+
     }
 }
