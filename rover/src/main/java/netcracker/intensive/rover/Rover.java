@@ -26,7 +26,7 @@ public class Rover implements Moveable, Landable, Liftable, Turnable {
     }
 
     public boolean isAirborne() {
-        LOG.info("Current rovers's airborne status is " + isAirborne);
+        LOG.info("Current rovers's airborne status: " + isAirborne);
         return (this.isAirborne);
     }
 

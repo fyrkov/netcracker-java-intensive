@@ -86,6 +86,7 @@ public class RoverCommandParserTest extends AbstractRoverTest {
     }
 
     //questionable test!!! Is log setting or command
+    //TODO ask about it
     @Test
     public void testGetProgramReturnsLogWrappedCommandsOnLogSetting() {
         String file = "program_with_log.txt";

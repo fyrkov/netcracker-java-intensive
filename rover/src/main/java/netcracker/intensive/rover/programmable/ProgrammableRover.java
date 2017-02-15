@@ -6,8 +6,6 @@ import netcracker.intensive.rover.command.LandCommand;
 import netcracker.intensive.rover.command.MoveCommand;
 import netcracker.intensive.rover.command.RoverCommand;
 import netcracker.intensive.rover.stats.SimpleRoverStatsModule;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.List;
@@ -19,7 +17,6 @@ import java.util.Map;
  */
 public class ProgrammableRover extends Rover implements ProgramFileAware {
 
-    private static Logger LOG = LoggerFactory.getLogger(ProgrammableRover.class);
     public SimpleRoverStatsModule simpleRoverStatsModule;
     private List<RoverCommand> commands;
     private Map<String, Object> settings;

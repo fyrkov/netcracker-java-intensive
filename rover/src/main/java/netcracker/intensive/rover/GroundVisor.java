@@ -15,7 +15,7 @@ public class GroundVisor {
 
     public boolean hasObstacles(Point p) throws OutOfGroundException {
 
-        GroundCell groundCell = null;
+        GroundCell groundCell;
         try {
             groundCell = this.ground.getCell(p.getX(), p.getY());
         } catch (Exception e) {
