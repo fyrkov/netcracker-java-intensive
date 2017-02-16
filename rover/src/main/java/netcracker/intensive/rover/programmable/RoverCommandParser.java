@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Map;
 public class RoverCommandParser {
 
     private static Logger LOG = LoggerFactory.getLogger(RoverCommandParser.class);
-    private final String PATH = "C:/Project/java-nc-intensive/rover/src/test/resources/netcracker/intensive/rover/programmable/";
+    private final String PATH = Paths.get("").toAbsolutePath().toString().concat("/src/test/resources/netcracker/intensive/rover/programmable/");
     private Rover rover;
     private String file;
     private List<String> commandStrings;
